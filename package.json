@@ -1,0 +1,13 @@
+{
+  "name": "TSlearing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:CAN1177/TSlearing.git",
+  "author": "CAN7 <39960526+CAN1177@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@type-challenges/utils": "^0.1.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  }
+}
