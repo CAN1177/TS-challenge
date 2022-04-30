@@ -18,7 +18,7 @@ type First<T extends any[]> = T extends [infer First, ...infer Rest] ? First : n
 // extends 类型条件判断
 // 获取 tuple 的length 属性
 // extends union 判断规则，可以遍历出
-// inter的使用（推断）
+// inter的使用（推断里面有没有）
 
 
 
