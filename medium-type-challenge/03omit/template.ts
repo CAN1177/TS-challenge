@@ -1,0 +1,18 @@
+// type MyOmit<T, K> = any
+
+type MyOmit<T, K extends keyof T> = {
+  [P in keyof T as P extends K ? never : P]:T[P]
+}
+
+
+interface Todo {
+  title: string
+  description: string
+  completed: boolean
+}
+
+type TodoPreview = MyOmit<Todo, 'description' | 'title'>
+
+const todo3: TodoPreview = {
+  completed: false,
+}
