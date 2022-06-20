@@ -7,24 +7,26 @@ interface Todo {
   description: string
 }
 
+// ts 内置Readlony使用
+type newTodo = Readonly<Todo>
 
 
 // js实现
 
-function readonly(obj) {
-	const result = {}
+// function readonly(obj) {
+// 	const result = {}
 
-	for( const key in obj ) {
-		result["readonly" + key] = obj[ key ]
-	}
-	return result
-}
+// 	for( const key in obj ) {
+// 		result["readonly" + key] = obj[ key ]
+// 	}
+// 	return result
+// }
 
-// 测试🌰
-const todo: MyReadonly<Todo> = {
-  title: "Hey",
-  description: "foobar"
-}
+// // 测试🌰
+// const todo: MyReadonly<Todo> = {
+//   title: "Hey",
+//   description: "foobar"
+// }
 
-todo.title = "Hello" // Error: cannot reassign a readonly property
-todo.description = "barFoo" // Error: cannot reassign a readonly property
+// todo.title = "Hello" // Error: cannot reassign a readonly property
+// todo.description = "barFoo" // Error: cannot reassign a readonly property

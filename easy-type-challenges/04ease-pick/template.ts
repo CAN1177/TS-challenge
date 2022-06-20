@@ -5,6 +5,16 @@ type MyPick<T, K extends keyof T> = {
 }
 
 
+interface Todo {
+  title: string
+  description: string
+  completed: boolean
+}
+
+type Todo2 = Pick<Todo, 'title' | 'completed'>
+
+
+
 // js 实现
 // function myPick(todo, keys) {
 //   const obj = {};

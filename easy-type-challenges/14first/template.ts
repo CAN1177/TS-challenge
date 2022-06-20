@@ -12,7 +12,7 @@
 
 // 解法4 inter
 
-type First<T extends any[]> = T extends [infer First, ...infer Rest] ? First : never;
+type First<T extends unknown[]> = T extends [infer First, ...infer Rest] ? First : never;
 
 // 涉及知识点
 // extends 类型条件判断
@@ -23,7 +23,9 @@ type First<T extends any[]> = T extends [infer First, ...infer Rest] ? First : n
 
 
 type arr1 = ['a', 'b', 'c']
-type arr2 = []
+type arr2 = [3, 2, 1]
+type arr13 = []
 
 type head1 = First<arr1> // expected to be 'a'
 type head2 = First<arr2> // expected to be 3
+type head3 = First<arr13> // expected to be never
