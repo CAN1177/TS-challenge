@@ -3,7 +3,7 @@
 type MyPick<T, K extends keyof T> = {
 	[P in K]: T[P]
 }
-// git测试过冲突ssss
+// git测试过冲突klklklkl
 
 // js 实现
 // function myPick(todo, keys) {
