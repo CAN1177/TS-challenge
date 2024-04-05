@@ -28,6 +28,6 @@ const todo2: MyReadonly2<Todo, 'title' | 'description'> = {
   completed: false,
 }
 
-todo2.title = "Hello" // Error: cannot reassign a readonly property
-todo2.description = "barFoo" // Error: cannot reassign a readonly property
+// todo2.title = "Hello" // Error: cannot reassign a readonly property
+// todo2.description = "barFoo" // Error: cannot reassign a readonly property
 todo2.completed = true // OK
